@@ -41,6 +41,7 @@ function preload() {
 // this is run after all assets are loaded
 function create() {
     // parameters x, y, image name called a key
+    //https://photonstorm.github.io/phaser3-docs/Phaser.Physics.Arcade.Image.html
     sprite = this.physics.add.image(400, 300, 'ship');
 
     sprite.body.setMaxSpeed(400);
@@ -65,6 +66,7 @@ function update() {
 
     // accelerate
     if (cursors.up.isDown) {
+        //
         this.physics.velocityFromRotation(sprite.rotation, sprite.body.maxSpeed, sprite.body.acceleration);
     }
     else {
